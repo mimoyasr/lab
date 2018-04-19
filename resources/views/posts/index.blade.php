@@ -12,6 +12,7 @@
             <tr>
     
                 <th  > Title </th>
+                <th  > Slug </th>
                 <th  > Posted By </th>
                 <th > Created At </th>
                 <th > Actions </th>
@@ -22,6 +23,7 @@
             <tr>
                 @foreach ( $posts as $post )
                     <td> {{ $post->title }} </td>
+                    <td> {{ $post->slug }} </td>
                     <td> {{ $post->user->name }} </td>
                     <td> {{ $post->readable_date }} </td>
                     <td id="actions" >
