@@ -15,7 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('posts', 'PostController')->middleware('auth');
-
+Route::get('login/github', 'Auth\LoginController@redirectToProvider');
+Route::get('login/github/callback', 'Auth\LoginController@handleProviderCallback');
 Auth::routes();
 
 Route::get('/home', 'PostController@index')->middleware('auth');;
