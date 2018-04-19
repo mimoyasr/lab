@@ -29,6 +29,12 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
+    'github' => [
+        'client_id' => env('GITHUB_CLIENT_ID','9e5e6c327ff6fa8655c4'),         // Your GitHub Client ID
+        'client_secret' => env('GITHUB_CLIENT_SECRET','25f5cfc5db1e167e24b8c18ed8bc657db991bb14'), // Your GitHub Client Secret
+        'redirect' => 'http://lab1.local/login/github/callback',
+    ],
+
     'stripe' => [
         'model' => App\User::class,
         'key' => env('STRIPE_KEY'),
