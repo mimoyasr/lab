@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::paginate(1);
+        $posts = Post::paginate(5);
         return view ('posts.index',[
             'posts'=> $posts
         ]);
@@ -49,7 +49,10 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        //dd()
+        return view('posts.show', [
+            "post" => $post,
+        ]);
     }
 
     /**
